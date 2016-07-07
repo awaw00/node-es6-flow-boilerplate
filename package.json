@@ -1,0 +1,26 @@
+{
+  "name": "node-es6-flow-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "clean:compile": "rimraf compile && mkdir compile",
+    "clean:build": "rimraf build && mkdir build",
+    "dev": "babel-node src/app.js",
+    "start": "npm run dev",
+    "compile": "npm run clean:compile && babel src -d compile",
+    "build": "npm run clean:build && babel src -o build/build.js"
+  },
+  "author": "awaw00<awaw0618@outlook.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-plugin-syntax-async-functions": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-plugin-transform-regenerator": "^6.9.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "flow-bin": "^0.28.0",
+    "rimraf": "^2.5.3"
+  }
+}
